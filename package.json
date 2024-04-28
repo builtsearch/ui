@@ -1,12 +1,12 @@
 {
-	"name": "ui",
+	"name": "@builtsearch/ui",
 	"version": "1.1.2",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/builtsearch/ui.git"
+		"url": "https://github.com/@builtsearch/ui.git"
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
+		"@builtsearch:registry": "https://npm.pkg.github.com"
 	},
 	"scripts": {
 		"dev": "vite dev",
