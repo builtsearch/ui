@@ -29,6 +29,7 @@ export let background;
 }
 header.bg-transparent {
   background-color: transparent !important;
+  border-bottom: 0;
 }
 header .slot {
   padding-left: 1rem;
