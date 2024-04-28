@@ -19,13 +19,9 @@ function updateTheme() {
 		t = $theme;
 	}
 }
-
-function navigateHome() {
-	goto("/");
-}
 </script>
 
-<button class="none no-focus no-hover" on:click={navigateHome}>
+<a class="button none no-focus no-hover" href="/">
 	<img
 		style="--height:{height}"
 		class="glyph"
@@ -40,10 +36,10 @@ function navigateHome() {
 			draggable="false" />
 		<span class:light={t == "light"}>{appName}</span>
 	</div>
-</button>
+</a>
 
 <style lang="scss">
-button {
+a {
 	display: flex;
 	align-items: center;
 	justify-content: center;

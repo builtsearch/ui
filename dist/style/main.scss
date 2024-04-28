@@ -319,7 +319,7 @@ select:-webkit-autofill:focus {
 	font-family: inherit;
 	font-size: inherit;
 	outline: none;
-	padding-left: 0rem;
+	padding-left: 0.5rem;
 	border-radius: 0.5rem;
 	resize: vertical;
 	color: var(--main);
@@ -346,7 +346,7 @@ select:-webkit-autofill:focus {
 		color: var(--mono);
 	}
 	input {
-		background-color: var(--inputBox-bg);
+		background-color: transparent;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 		border: 0;

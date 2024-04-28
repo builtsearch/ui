@@ -47,7 +47,7 @@ main {
 	padding: 1rem;
 	width: min(700px, 100%);
 	margin-inline: auto;
-	min-height: calc(100vh - 70px);
+	min-height: calc(100vh - 60px);
 	gap: 1rem;
 }
 h3 {
