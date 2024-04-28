@@ -326,8 +326,9 @@ select:-webkit-autofill:focus {
 	display: flex;
 	align-items: center;
 
+	--inputBox-bg: color-mix(in srgb, var(--bg-inverse) 6%, transparent);
 	border: 1px solid var(--mono-200);
-	background-color: color-mix(in srgb, var(--bg-inverse) 6%, transparent);
+	background-color: var(--inputBox-bg);
 
 	.icon {
 		display: flex;
