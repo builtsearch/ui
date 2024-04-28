@@ -36,6 +36,11 @@
 				<input disabled type="text" value="With Button" />
 				<button class="disabled">OK</button>
 			</div>
+
+			<div class="inputField">
+				<label for="input">Label</label>
+				<input type="text" id="input" value="input" />
+			</div>
 		</div>
 	</div>
 </main>

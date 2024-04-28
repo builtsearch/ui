@@ -29,6 +29,7 @@ header {
 	backdrop-filter: blur(6px);
 	&.bg-transparent {
 		background-color: transparent !important;
+		border-bottom: 0;
 	}
 	.slot {
 		padding-left: 1rem;
