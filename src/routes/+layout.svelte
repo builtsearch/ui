@@ -7,9 +7,9 @@ import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
 </script>
 
 <Header>
-	<div>item 1</div>
-	<div>item 2</div>
-	<Theme />
+	<div class="menu">
+		<Theme />
+	</div>
 </Header>
 <slot />
 
@@ -54,3 +54,9 @@ import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
 		<a href="/sitemap">Sitemap</a>
 	</div>
 </Footer>
+
+<style lang="scss">
+.menu {
+	margin-left: auto;
+}
+</style>

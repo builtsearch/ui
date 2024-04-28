@@ -14,11 +14,11 @@ export let height = "36px";
 
 <style>header {
   z-index: 100;
-  padding-block-start: 12px;
-  padding-block-end: 11px;
   display: flex;
   align-items: center;
   padding-inline: 1rem;
+  padding-block-start: 12px;
+  padding-block-end: 11px;
   border-bottom: 1px solid var(--mono-50);
   position: sticky;
   top: 0;

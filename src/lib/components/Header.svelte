@@ -3,9 +3,10 @@ import Logo from "./sub/Logo.svelte";
 export let glyph = "B";
 export let appName = "";
 export let height = "36px";
+export let background;
 </script>
 
-<header>
+<header class:bg-transparent={background == "transparent"}>
 	<Logo {glyph} {appName} {height} />
 	<div class="slot">
 		<slot />
@@ -26,7 +27,9 @@ header {
 	width: 100%;
 	background: color-mix(in srgb, var(--bg-p), 24% transparent);
 	backdrop-filter: blur(6px);
-
+	&.bg-transparent {
+		background-color: transparent !important;
+	}
 	.slot {
 		padding-left: 1rem;
 		display: flex;
