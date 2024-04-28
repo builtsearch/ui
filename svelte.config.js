@@ -12,7 +12,7 @@ const config = {
 			$utils: "./src/utils",
 		},
 		files: {
-			assets: "static",
+			assets: "./static",
 		},
 	},
 	preprocess: preprocess(),
