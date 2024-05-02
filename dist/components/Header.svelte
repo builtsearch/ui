@@ -20,6 +20,7 @@ export let background;
   padding-inline: 1rem;
   padding-block-start: 12px;
   padding-block-end: 11px;
+  max-height: 60px;
   border-bottom: 1px solid var(--mono-50);
   position: sticky;
   top: 0;
@@ -29,6 +30,7 @@ export let background;
 }
 header.bg-transparent {
   background-color: transparent !important;
+  padding-block-end: 12px;
   border-bottom: 0;
 }
 header .slot {

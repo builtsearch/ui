@@ -19,13 +19,9 @@ function updateTheme() {
 		t = $theme;
 	}
 }
-
-function navigateHome() {
-	goto("/");
-}
 </script>
 
-<button class="none no-focus no-hover" on:click={navigateHome}>
+<a class="button none no-focus no-hover" href="/">
 	<img
 		style="--height:{height}"
 		class="glyph"
@@ -40,9 +36,9 @@ function navigateHome() {
 			draggable="false" />
 		<span class:light={t == "light"}>{appName}</span>
 	</div>
-</button>
+</a>
 
-<style>button {
+<style>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,16 +48,16 @@ function navigateHome() {
   cursor: pointer;
   gap: 0.5rem;
 }
-button img,
-button span {
+a img,
+a span {
   user-select: none;
   pointer-events: none;
 }
-button .name {
+a .name {
   display: flex;
   align-items: baseline;
 }
-button .name span {
+a .name span {
   margin-left: 4px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -69,12 +65,12 @@ button .name span {
   font-size: 24px;
   line-height: 0px;
 }
-button .name span.light {
+a .name span.light {
   color: #303941;
 }
-button .glyph {
+a .glyph {
   height: var(--height);
 }
-button .logo {
+a .logo {
   height: 24px;
 }</style>

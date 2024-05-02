@@ -69,8 +69,13 @@
 }
 * {
 	box-sizing: border-box;
-
+	input {
+		color-scheme: dark;
+	}
 	.light {
+		input {
+			color-scheme: light;
+		}
 		--main: #344856;
 		--main-alt: #fff;
 		--main-light: #82868f;
@@ -310,9 +315,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	-webkit-text-fill-color: var(--main) !important;
-	-webkit-box-shadow: 0 0 0px 10000px var(--bg-p) inset;
-	transition: background-color 5000s ease-in-out 0s;
+	--color: color-mix(in srgb, var(--accent) 12%, var(--bg-p));
+	-webkit-box-shadow: 0 0 0px 10000px var(--color) inset;
 }
 
 .inputBox {

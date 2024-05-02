@@ -23,6 +23,8 @@
 		<h3>Inputs</h3>
 		<div class="col inputs">
 			<input type="text" value="input" />
+			<input type="email" for="email" id="email" placeholder="Auto Complete" />
+
 			<input type="text" value="disabled" disabled />
 			<div class="inputBox">
 				<div class="prefix">$</div>
