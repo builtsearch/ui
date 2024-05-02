@@ -203,7 +203,8 @@ button {
 		outline: var(--focus-visible-outline) !important;
 	}
 
-	&.outline {
+	&.outline,
+	&.outlined {
 		border: 1px solid var(--accent);
 		--button-bg: transparent;
 
