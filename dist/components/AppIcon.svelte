@@ -3,6 +3,19 @@ import { theme } from "./sub/theme.store.js";
 /** @type {string} - Glyph icon enum from A to Z. */
 export let glyph = "B";
 export let themeOverride = "";
+let src;
+const glyphs = import.meta.glob("$lib/assets/glyph/*.svg", { eager: true });
+
+(async () => {
+	for await (const key of Object.keys(glyphs)) {
+		if (key.endsWith(`${glyph}.svg`)) {
+			const file = await glyphs[key];
+			const { default: defaultExport } = file;
+			src = defaultExport;
+			break;
+		}
+	}
+})();
 
 $: glyph = glyph.toUpperCase();
 
@@ -16,14 +29,11 @@ function updateTheme() {
 		t = $theme;
 	}
 }
-let glyphs = import.meta.glob(`../assets/glyph/*.svg`, { eager: true });
-
-for (const path in glyphs) {
-	console.log(path);
-}
 </script>
 
-<img class="glyph" src={`../assets/glyph/${glyph}.svg`} alt="glyph_logo" draggable="false" />
+{#if src}
+	<img class="glyph" {src} alt="glyph_logo" draggable="false" />
+{/if}
 
 <style>img {
   aspect-ratio: 1;

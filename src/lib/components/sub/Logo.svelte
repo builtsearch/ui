@@ -10,8 +10,6 @@ export let height = "48px";
 import logo_light from "$lib/assets/builtsearch_logo.svg";
 import logo_dark from "$lib/assets/builtsearch_logo_dark.svg";
 
-console.log(logo_light);
-
 $: glyph = glyph.toUpperCase();
 
 let t;

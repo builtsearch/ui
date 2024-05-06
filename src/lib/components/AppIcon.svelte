@@ -4,6 +4,19 @@ import { theme } from "$lib/components/sub/theme.store.js";
 export let glyph = "B";
 export let themeOverride = "";
 let src;
+const glyphs = import.meta.glob("$lib/assets/glyph/*.svg", { eager: true });
+
+(async () => {
+	for await (const key of Object.keys(glyphs)) {
+		if (key.endsWith(`${glyph}.svg`)) {
+			const file = await glyphs[key];
+			const { default: defaultExport } = file;
+			src = defaultExport;
+			break;
+		}
+	}
+})();
+
 $: glyph = glyph.toUpperCase();
 
 let t;
@@ -16,18 +29,11 @@ function updateTheme() {
 		t = $theme;
 	}
 }
-let glyphs = import.meta.glob(`../assets/glyph/*.svg`, { eager: true });
-
-for (const path in glyphs) {
-	if (path.endsWith(`/${glyph}.svg`)) {
-		src = glyphs[path].default;
-		console.log(src);
-		break;
-	}
-}
 </script>
 
-<img class="glyph" {src} alt="glyph_logo" draggable="false" />
+{#if src}
+	<img class="glyph" {src} alt="glyph_logo" draggable="false" />
+{/if}
 
 <style lang="scss">
 img {
