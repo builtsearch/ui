@@ -1,6 +1,6 @@
 <script>
 import { theme } from "$lib/components/sub/theme.store.js";
-import AppIcon from "../AppIcon.svelte";
+import { AppIcon } from "$lib/index.js";
 
 /** @type {string} - Glyph icon enum from A to Z. */
 export let glyph = "B";
@@ -68,9 +68,7 @@ a {
 			}
 		}
 	}
-	.glyph {
-		height: var(--height);
-	}
+
 	.logo {
 		height: 24px;
 	}
