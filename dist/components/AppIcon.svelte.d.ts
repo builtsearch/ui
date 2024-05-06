@@ -2,7 +2,8 @@
 /** @typedef {typeof __propDef.events}  AppIconEvents */
 /** @typedef {typeof __propDef.slots}  AppIconSlots */
 export default class AppIcon extends SvelteComponent<{
-    [x: string]: never;
+    glyph?: string;
+    themeOverride?: string;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {}> {
@@ -13,7 +14,8 @@ export type AppIconSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        [x: string]: never;
+        glyph?: string;
+        themeOverride?: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;

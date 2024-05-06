@@ -1,10 +1,16 @@
 <script>
 import { theme } from "./theme.store.js";
+import AppIcon from "../AppIcon.svelte";
+
 /** @type {string} - Glyph icon enum from A to Z. */
 export let glyph = "B";
 export let appName = "";
 export let themeOverride = "";
 export let height = "48px";
+import logo_light from "../../assets/builtsearch_logo.svg";
+import logo_dark from "../../assets/builtsearch_logo_dark.svg";
+
+console.log(logo_light);
 
 $: glyph = glyph.toUpperCase();
 
@@ -21,16 +27,11 @@ function updateTheme() {
 </script>
 
 <a class="button none no-focus no-hover" href="/">
-	<img
-		style="--height:{height}"
-		class="glyph"
-		src="/assets/glyph/{glyph}.svg"
-		alt="glyph_logo"
-		draggable="false" />
+	<AppIcon {glyph} --height={height} />
 	<div class="name">
 		<img
 			class="logo"
-			src="/assets/builtsearch_logo{t == 'dark' ? '_dark' : ''}.svg"
+			src={$theme == "light" ? logo_light : logo_dark}
 			alt="logo"
 			draggable="false" />
 		<span class:light={t == "light"}>{appName}</span>
