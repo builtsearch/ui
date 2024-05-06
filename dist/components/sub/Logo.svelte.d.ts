@@ -3,8 +3,8 @@
 /** @typedef {typeof __propDef.slots}  LogoSlots */
 export default class Logo extends SvelteComponent<{
     glyph?: string;
-    themeOverride?: string;
     appName?: string;
+    themeOverride?: string;
     height?: string;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -17,8 +17,8 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         glyph?: string;
-        themeOverride?: string;
         appName?: string;
+        themeOverride?: string;
         height?: string;
     };
     events: {

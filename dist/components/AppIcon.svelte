@@ -16,11 +16,14 @@ function updateTheme() {
 		t = $theme;
 	}
 }
+let glyphs = import.meta.glob(`../assets/glyph/*.svg`, { eager: true });
+
+for (const path in glyphs) {
+	console.log(path);
+}
 </script>
 
-{#await import(`$lib/assets/glyph/${glyph}.svg`) then { default: src }}
-	<img class="glyph" {src} alt="glyph_logo" draggable="false" />
-{/await}
+<img class="glyph" src={`../assets/glyph/${glyph}.svg`} alt="glyph_logo" draggable="false" />
 
 <style>img {
   aspect-ratio: 1;
