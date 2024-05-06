@@ -1,5 +1,4 @@
 <script>
-import { goto } from "$app/navigation";
 import { theme } from "./theme.store.js";
 /** @type {string} - Glyph icon enum from A to Z. */
 export let glyph = "B";
@@ -25,13 +24,13 @@ function updateTheme() {
 	<img
 		style="--height:{height}"
 		class="glyph"
-		src="/logo/glyph/{glyph}.svg"
+		src="/assets/glyph/{glyph}.svg"
 		alt="glyph_logo"
 		draggable="false" />
 	<div class="name">
 		<img
 			class="logo"
-			src="/logo/builtsearch_logo{t == 'dark' ? '_dark' : ''}.svg"
+			src="/assets/builtsearch_logo{t == 'dark' ? '_dark' : ''}.svg"
 			alt="logo"
 			draggable="false" />
 		<span class:light={t == "light"}>{appName}</span>

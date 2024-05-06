@@ -3,7 +3,7 @@ import Logo from "./sub/Logo.svelte";
 export let glyph = "B";
 export let appName = "";
 export let height = "36px";
-export let background;
+export let background = "";
 </script>
 
 <header class:bg-transparent={background == "transparent"}>

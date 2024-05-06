@@ -1,5 +1,15 @@
+<script>
+import AppIcon from "$lib/components/AppIcon.svelte";
+</script>
+
 <main>
 	<h1>BuiltSearch UI Library</h1>
+	<div class="card">
+		<h3>Component</h3>
+		<div class="row">
+			<AppIcon glyph="C" --height="48px" />
+		</div>
+	</div>
 	<div class="card">
 		<h3>Buttons</h3>
 		<div class="row">
@@ -9,34 +19,34 @@
 			<button class="none">None</button>
 			<button class="small">smaller button</button>
 		</div>
-	</div>
 
-	<div class="card">
-		<h3>Links</h3>
-		<div class="row">
-			<a href="/">go to link</a>
-			<a class="button" href="/">Button link</a>
+		<div class="card">
+			<h3>Links</h3>
+			<div class="row">
+				<a href="/">go to link</a>
+				<a class="button" href="/">Button link</a>
+			</div>
 		</div>
-	</div>
 
-	<div class="card">
-		<h3>Inputs</h3>
-		<div class="col inputs">
-			<input type="text" value="input" />
-			<input type="email" for="email" id="email" placeholder="Auto Complete" />
+		<div class="card">
+			<h3>Inputs</h3>
+			<div class="col inputs">
+				<input type="text" value="input" />
+				<input type="email" for="email" id="email" placeholder="Auto Complete" />
 
-			<input type="text" value="disabled" disabled />
-			<div class="inputBox">
-				<div class="prefix">$</div>
-				<input type="text" value="With Prefix" />
-			</div>
-			<div class="inputBox">
-				<input type="text" value="With Button" />
-				<button>OK</button>
-			</div>
-			<div class="inputBox disabled">
-				<input disabled type="text" value="With Button" />
-				<button class="disabled">OK</button>
+				<input type="text" value="disabled" disabled />
+				<div class="inputBox">
+					<div class="prefix">$</div>
+					<input type="text" value="With Prefix" />
+				</div>
+				<div class="inputBox">
+					<input type="text" value="With Button" />
+					<button>OK</button>
+				</div>
+				<div class="inputBox disabled">
+					<input disabled type="text" value="With Button" />
+					<button class="disabled">OK</button>
+				</div>
 			</div>
 		</div>
 	</div>

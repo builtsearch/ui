@@ -2,10 +2,10 @@
 /** @typedef {typeof __propDef.events}  HeaderEvents */
 /** @typedef {typeof __propDef.slots}  HeaderSlots */
 export default class Header extends SvelteComponent<{
-    background: any;
     glyph?: string;
     appName?: string;
     height?: string;
+    background?: string;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -18,10 +18,10 @@ export type HeaderSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        background: any;
         glyph?: string;
         appName?: string;
         height?: string;
+        background?: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;

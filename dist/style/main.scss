@@ -205,10 +205,10 @@ button {
 
 	&.outline,
 	&.outlined {
-		border: 1px solid var(--accent);
+		--border-color: var(--text-color);
 		--button-bg: transparent;
-
-		color: var(--accent);
+		--text-color: var(--accent);
+		border: 1px solid var(--border-color);
 		&:hover {
 			background-color: color-mix(in srgb, var(--accent) 12%, transparent);
 		}
@@ -266,6 +266,9 @@ button {
 	&.rounded {
 		aspect-ratio: 1;
 		border-radius: 100%;
+	}
+	&.warning {
+		--text-color: var(--red);
 	}
 }
 
