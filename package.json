@@ -10,6 +10,7 @@
 	},
 	"scripts": {
 		"dev": "vite dev",
+		"build-assets-dev": "nodemon src/build.js",
 		"build-assets": "node src/build.js",
 		"build": "npm run build-assets && vite build && npm run package",
 		"preview": "vite preview",

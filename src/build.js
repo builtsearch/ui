@@ -7,7 +7,6 @@ const destDir = "./src/lib";
 function copyFolderRecursiveSync(source, target) {
 	source = path.resolve(source);
 	target = path.resolve(target);
-	console.log(source, target);
 	if (!fs.existsSync(target)) {
 		fs.mkdirSync(target);
 	}
@@ -22,6 +21,18 @@ function copyFolderRecursiveSync(source, target) {
 			fs.copyFileSync(currentSource, currentTarget);
 		}
 	});
+}
+
+createGlyphJSON();
+function createGlyphJSON() {
+	const glyphs = fs.readdirSync("./src/lib/assets/glyph");
+	const data = {};
+	for (const fileName of glyphs) {
+		const name = fileName.split(".")[0];
+		const file = fs.readFileSync(`./src/lib/assets/glyph/${fileName}`, "utf8");
+		data[name] = file;
+	}
+	fs.writeFileSync("./src/lib/glyph.json", JSON.stringify(data));
 }
 
 copyFolderRecursiveSync(sourceDir, destDir);

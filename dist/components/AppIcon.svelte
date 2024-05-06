@@ -1,21 +1,16 @@
 <script>
+import glyphJSON from "../glyph.json";
 import { theme } from "./sub/theme.store.js";
 /** @type {string} - Glyph icon enum from A to Z. */
 export let glyph = "B";
 export let themeOverride = "";
-let src;
-const glyphs = import.meta.glob("$lib/assets/glyph/*.svg", { eager: true });
+let src = createImage();
+function createImage() {
+	const glyphData = glyphJSON[glyph];
 
-(async () => {
-	for await (const key of Object.keys(glyphs)) {
-		if (key.endsWith(`${glyph}.svg`)) {
-			const file = await glyphs[key];
-			const { default: defaultExport } = file;
-			src = defaultExport;
-			break;
-		}
-	}
-})();
+	const blob = new Blob([glyphData], { type: "image/svg+xml" });
+	return URL.createObjectURL(blob);
+}
 
 $: glyph = glyph.toUpperCase();
 
@@ -31,9 +26,7 @@ function updateTheme() {
 }
 </script>
 
-{#if src}
-	<img class="glyph" {src} alt="glyph_logo" draggable="false" />
-{/if}
+<img class="glyph" {src} alt="glyph_logo" draggable="false" />
 
 <style>img {
   aspect-ratio: 1;
