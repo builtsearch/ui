@@ -78,7 +78,7 @@ export function changeTheme() {
 	align-items: center;
 
 	&:hover {
-		background-color: transparent;
+		background-color: var(--hover-background-color, transparent);
 	}
 	&:focus {
 		background-color: transparent;
