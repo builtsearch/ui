@@ -76,7 +76,7 @@ export function changeTheme() {
   align-items: center;
 }
 #theme_button:hover {
-  background-color: transparent;
+  background-color: var(--hover-background-color, transparent);
 }
 #theme_button:focus {
   background-color: transparent;
