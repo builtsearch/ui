@@ -2,6 +2,7 @@
 /** @typedef {typeof __propDef.events}  ThemeEvents */
 /** @typedef {typeof __propDef.slots}  ThemeSlots */
 export default class Theme extends SvelteComponent<{
+    hover?: boolean;
     changeTheme?: () => void;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -14,6 +15,7 @@ export type ThemeSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
+        hover?: boolean;
         changeTheme?: () => void;
     };
     events: {

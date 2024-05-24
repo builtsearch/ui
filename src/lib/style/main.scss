@@ -240,8 +240,7 @@ button {
 		color: inherit;
 		width: fit-content;
 		height: fit-content;
-		padding: 0.25rem;
-		padding-inline: 0.5rem;
+		padding: var(--padding, 0.25rem);
 		border-radius: 0.25rem;
 		font-weight: inherit;
 		&:hover {

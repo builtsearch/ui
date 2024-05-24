@@ -2,7 +2,7 @@
 import Icon from "@iconify/svelte";
 import { onMount } from "svelte";
 import { theme } from "./theme.store.js";
-
+export let hover = true;
 let rotate = 0;
 onMount(() => {
 	const systemIsDark = window.matchMedia("(prefers-color-scheme: dark").matches;
@@ -49,6 +49,8 @@ export function changeTheme() {
 <button
 	id="theme_button"
 	style="transform:rotateZ({rotate}deg)"
+	class="none"
+	class:no-hover={!hover}
 	data-theme={$theme}
 	on:click={() => changeTheme()}>
 	{#if $theme == "light"}
@@ -59,7 +61,6 @@ export function changeTheme() {
 </button>
 
 <style>#theme_button {
-  background-color: transparent;
   outline: none;
   border: none;
   padding: 0;
@@ -74,13 +75,4 @@ export function changeTheme() {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#theme_button:hover {
-  background-color: var(--hover-background-color, transparent);
-}
-#theme_button:focus {
-  background-color: transparent;
-}
-#theme_button:active {
-  background-color: transparent;
 }</style>
