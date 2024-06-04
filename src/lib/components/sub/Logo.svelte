@@ -25,14 +25,18 @@ function updateTheme() {
 </script>
 
 <a class="button none no-focus no-hover" href="/">
-	<AppIcon {glyph} --height={height} />
+	{#if glyph}
+		<AppIcon {glyph} --height={height} />
+	{/if}
 	<div class="name">
 		<img
 			class="logo"
 			src={$theme == "light" ? logo_light : logo_dark}
 			alt="logo"
 			draggable="false" />
-		<span class:light={t == "light"}>{appName}</span>
+		{#if appName}
+			<span class:light={t == "light"}>{appName}</span>
+		{/if}
 	</div>
 </a>
 
@@ -46,6 +50,8 @@ a {
 	background-color: transparent;
 	cursor: pointer;
 	gap: 0.5rem;
+	flex-shrink: 0;
+
 	img,
 	span {
 		user-select: none;

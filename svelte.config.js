@@ -16,6 +16,13 @@ const config = {
 		},
 	},
 	preprocess: preprocess(),
+	vitePlugin: {
+		inspector: {
+			toggleKeyCombo: "alt-shift",
+			toggleButtonPos: "bottom-left",
+			alwaysOnTop: false,
+		},
+	},
 };
 
 export default config;
