@@ -12,7 +12,7 @@ export async function handleButtonClick() {
 	isAwaiting = true;
 	await handleClick();
 
-	if (persist) return;
+	if (!persist) return;
 	isAwaiting = false;
 }
 </script>
@@ -34,36 +34,32 @@ export async function handleButtonClick() {
 	</span>
 </button>
 
-<style lang="scss">
-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--width, fit-content);
-	padding-inline: var(--padding-inline, 2rem);
-	position: relative;
-
-	.icon {
-		position: absolute;
-		bottom: 0;
-	}
-
-	&.isAwaiting {
-		cursor: default;
-		--button-bg: var(--accent-600);
-		filter: grayscale(0.7);
-		&:hover {
-			background-color: var(--button-bg);
-		}
-		&.outlined {
-			filter: grayscale(0.4);
-			--border-color: var(--accent-400);
-			--button-bg: color-mix(in srgb, var(--accent-600), 90% transparent);
-			--text-color: var(--accent);
-		}
-	}
-	span.hide {
-		visibility: hidden;
-	}
+<style>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width, fit-content);
+  padding-inline: var(--padding-inline, 2rem);
+  position: relative;
 }
-</style>
+button .icon {
+  position: absolute;
+  bottom: 0;
+}
+button.isAwaiting {
+  cursor: default;
+  --button-bg: var(--accent-600);
+  filter: grayscale(0.7);
+}
+button.isAwaiting:hover {
+  background-color: var(--button-bg);
+}
+button.isAwaiting.outlined {
+  filter: grayscale(0.4);
+  --border-color: var(--accent-400);
+  --button-bg: color-mix(in srgb, var(--accent-600), 90% transparent);
+  --text-color: var(--accent);
+}
+button span.hide {
+  visibility: hidden;
+}</style>
