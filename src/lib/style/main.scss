@@ -213,6 +213,7 @@ button {
 		--button-bg: transparent;
 		--text-color: var(--accent);
 		border: 1px solid var(--border-color);
+		padding: calc(0.5rem - 1px) calc(1rem - 1px);
 		&:hover {
 			background-color: color-mix(in srgb, var(--accent) 12%, transparent);
 		}

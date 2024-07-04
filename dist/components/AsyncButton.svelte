@@ -12,7 +12,7 @@ export async function handleButtonClick() {
 	isAwaiting = true;
 	await handleClick();
 
-	if (!persist) return;
+	if (persist) return;
 	isAwaiting = false;
 }
 </script>
