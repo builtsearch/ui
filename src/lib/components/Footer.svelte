@@ -4,7 +4,7 @@ import { page } from "$app/stores";
 
 export let glyph = "B";
 export let copyright_url = $page.url.host;
-export let appName = "";
+export let appName = "asd";
 </script>
 
 <footer {glyph}>
