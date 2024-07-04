@@ -17,7 +17,8 @@ $: $theme, updateTheme();
 
 function updateTheme() {
 	if (themeOverride) {
-		t = themeOverride === "light" ? "light" : "dark";
+		t = themeOverride;
+		console.log(t);
 	} else {
 		t = $theme;
 	}
@@ -31,7 +32,7 @@ function updateTheme() {
 	<div class="name">
 		<img
 			class="logo"
-			src={$theme == "light" ? logo_light : logo_dark}
+			src={t == "light" ? logo_light : logo_dark}
 			alt="logo"
 			draggable="false" />
 		{#if appName}
