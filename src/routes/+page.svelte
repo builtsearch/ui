@@ -1,12 +1,19 @@
 <script>
 import AppIcon from "$lib/components/AppIcon.svelte";
 import AsyncButton from "$lib/components/AsyncButton.svelte";
+import SegmentedControl from "$lib/components/SegmentedControl.svelte";
 
 async function awaitClick() {
 	await new Promise((resolve) => setTimeout(resolve, 1000));
 
 	console.log("done");
 }
+
+let segmentedControlOptions = [
+	{ icon: "ic:round-square", value: "Option 1" },
+	{ icon: "ic:round-circle", value: "Option 2" },
+	{ icon: "ph:triangle-fill", value: "Option 3" },
+];
 </script>
 
 <main>
@@ -17,7 +24,10 @@ async function awaitClick() {
 			<AppIcon glyph="C" --height="48px" />
 		</div>
 	</div>
-	<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
+	<div class="card">
+		<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
+		<SegmentedControl evenWidth={true} options={segmentedControlOptions} />
+	</div>
 	<div class="card">
 		<h3>Buttons</h3>
 		<div class="row">
