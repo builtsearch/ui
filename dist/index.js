@@ -9,4 +9,5 @@ export { default as Button } from "./components/Button.svelte";
 export { default as FooterLinks } from "./components/sub/FooterLinks.svelte";
 export { default as AppIcon } from "./components/AppIcon.svelte";
 export { default as AsyncButton } from "./components/AsyncButton.svelte";
+export { default as SegmentedControl } from "./components/SegmentedControl.svelte";
 export { theme } from "./components/sub/theme.store.js";
