@@ -3,7 +3,7 @@ import Icon from "@iconify/svelte";
 import { createEventDispatcher } from "svelte";
 export let options = [];
 options = initOptions();
-export let selected = options[0];
+export let selected = options[0].value;
 export let evenWidth = false;
 export let accented = false;
 

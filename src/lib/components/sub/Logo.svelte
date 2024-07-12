@@ -25,7 +25,7 @@ function updateTheme() {
 }
 </script>
 
-<a class="button none no-focus no-hover" href="/">
+<a class="button none no-hover" href="/">
 	{#if glyph}
 		<AppIcon {glyph} --height={height} />
 	{/if}
