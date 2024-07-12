@@ -164,6 +164,14 @@
 	background-color: transparent;
 }
 
+@mixin text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
 body {
 	padding: 0;
 	margin: 0;
