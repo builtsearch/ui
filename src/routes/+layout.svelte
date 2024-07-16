@@ -6,7 +6,7 @@ import Footer from "$lib/components/Footer.svelte";
 import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
 </script>
 
-<Header background="transparent">
+<Header --transparency="50%">
 	<div class="menu">
 		<Theme />
 	</div>
