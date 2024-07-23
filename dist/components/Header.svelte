@@ -25,7 +25,7 @@ export let background = "";
   position: sticky;
   top: 0;
   width: 100%;
-  background: color-mix(in srgb, var(--bg-p), 24% transparent);
+  background: color-mix(in srgb, var(--bg-p), var(--transparency, 24%) transparent);
   backdrop-filter: blur(6px);
 }
 header.bg-transparent {

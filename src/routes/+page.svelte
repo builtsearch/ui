@@ -26,7 +26,10 @@ let segmentedControlOptions = [
 	</div>
 	<div class="card">
 		<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
-		<SegmentedControl evenWidth={true} options={segmentedControlOptions} />
+		<SegmentedControl
+			evenWidth={true}
+			options={segmentedControlOptions}
+			on:change={(e) => console.log(e.detail)} />
 	</div>
 	<div class="card">
 		<h3>Buttons</h3>
