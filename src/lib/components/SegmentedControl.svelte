@@ -82,11 +82,11 @@ export async function change(value) {
 		}
 	}
 	button {
-		width: var(--button-width, 100%);
+		width: var(--button-width, auto);
 		position: relative;
 		padding-inline: 1rem;
 		padding-block: 0.25rem;
-		color: var(--mono-00);
+		color: var(--inactive-color, var(--main));
 		font-size: var(--font-size, 1rem);
 		display: flex;
 		align-items: center;

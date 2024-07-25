@@ -78,7 +78,7 @@ export async function change(value) {
   color: var(--main-alt);
 }
 .segmented-control-container button {
-  width: 100%;
+  width: var(--button-width, 100%);
   position: relative;
   padding-inline: 1rem;
   padding-block: 0.25rem;
