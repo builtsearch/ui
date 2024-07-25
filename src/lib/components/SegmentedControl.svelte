@@ -1,6 +1,10 @@
 <script>
 import Icon from "@iconify/svelte";
 import { createEventDispatcher } from "svelte";
+
+/**
+ * @params {String|Array} options -An array of string, or an array of objects with value and displayValue
+ */
 export let options = [];
 options = initOptions();
 export let selected = options[0].value;
