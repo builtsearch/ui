@@ -10,9 +10,9 @@ async function awaitClick() {
 }
 
 let segmentedControlOptions = [
-	{ icon: "ic:round-square", value: "Option 1" },
-	{ icon: "ic:round-circle", value: "Option 2" },
-	{ icon: "ph:triangle-fill", value: "Option 3" },
+	{ icon: "ic:round-square", value: "1", displayValue: "Option 1" },
+	{ icon: "ic:round-circle", value: "2", displayValue: "Option 2" },
+	{ icon: "ph:triangle-fill", value: "3" },
 ];
 </script>
 

@@ -1,6 +1,10 @@
 <script>
 import Icon from "@iconify/svelte";
 import { createEventDispatcher } from "svelte";
+
+/**
+ * @params {String|Array} options -An array of string, or an array of objects with value and displayValue
+ */
 export let options = [];
 options = initOptions();
 export let selected = options[0].value;
@@ -46,7 +50,11 @@ export async function change(value) {
 					<Icon icon={option.icon} width="16" height="16" />
 				</div>
 			{/if}
-			{option.value}
+			{#if option.displayValue}
+				{option.displayValue}
+			{:else}
+				{option.value}
+			{/if}
 		</button>
 	{/each}
 </div>
