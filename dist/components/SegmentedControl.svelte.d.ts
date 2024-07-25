@@ -7,6 +7,7 @@ export default class SegmentedControl extends SvelteComponent<{
     selected?: any;
     evenWidth?: boolean;
     accented?: boolean;
+    ignoreSameOption?: boolean;
 }, {
     change: CustomEvent<any>;
 } & {
@@ -25,6 +26,7 @@ declare const __propDef: {
         selected?: any;
         evenWidth?: boolean;
         accented?: boolean;
+        ignoreSameOption?: boolean;
     };
     events: {
         change: CustomEvent<any>;

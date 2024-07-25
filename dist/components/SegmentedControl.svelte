@@ -6,6 +6,7 @@ options = initOptions();
 export let selected = options[0].value;
 export let evenWidth = false;
 export let accented = false;
+export let ignoreSameOption = true;
 
 const dispatch = createEventDispatcher();
 
@@ -36,6 +37,7 @@ export async function change(value) {
 			class="none"
 			class:selected={option.value == selected}
 			on:click={() => {
+				if (option.value == selected && ignoreSameOption == true) return;
 				selected = option.value;
 				change(selected);
 			}}>
