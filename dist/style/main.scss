@@ -77,9 +77,6 @@
 		color-scheme: dark;
 	}
 	.light {
-		input {
-			color-scheme: light;
-		}
 		--main: #344856;
 		--main-alt: #fff;
 		--main-light: #82868f;
@@ -135,6 +132,9 @@
 		--mono-700: #535353;
 		--mono-800: #3e3e3e;
 		--mono-900: #2a2a2a;
+		input {
+			color-scheme: light;
+		}
 	}
 }
 
@@ -299,6 +299,7 @@ input {
 
 	border: 1px solid var(--mono-200);
 	background-color: color-mix(in srgb, var(--bg-inverse) 6%, transparent);
+	-moz-appearance: textfield;
 
 	&.small {
 		font-size: 0.875rem;
@@ -309,7 +310,6 @@ input {
 		border: 1px solid transparent;
 		outline: 1px solid var(--accent);
 	}
-	-moz-appearance: textfield;
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
 		-webkit-appearance: none;
@@ -336,6 +336,7 @@ textarea {
 
 	border: 1px solid var(--mono-200);
 	background-color: color-mix(in srgb, var(--bg-inverse) 6%, transparent);
+	-moz-appearance: textfield;
 
 	&.small {
 		font-size: 0.875rem;
@@ -347,7 +348,6 @@ textarea {
 		outline: 1px solid var(--accent);
 	}
 
-	-moz-appearance: textfield;
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
 		-webkit-appearance: none;

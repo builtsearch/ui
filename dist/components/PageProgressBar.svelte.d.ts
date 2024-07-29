@@ -1,3 +1,4 @@
+export const ssr: false;
 /** @typedef {typeof __propDef.props}  PageProgressBarProps */
 /** @typedef {typeof __propDef.events}  PageProgressBarEvents */
 /** @typedef {typeof __propDef.slots}  PageProgressBarSlots */

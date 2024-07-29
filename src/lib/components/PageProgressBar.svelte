@@ -1,20 +1,17 @@
+<script context="module">
+export const ssr = false;
+</script>
+
 <script>
 import { fade } from "svelte/transition";
 import { navigating } from "$app/stores";
 
 let progressBar;
-let random_1 = 0;
-let random_2 = 0;
-let isNavigating = false;
+let random_1, random_2;
 
-if (typeof window !== "undefined") {
-	$navigating.subscribe((value) => {
-		isNavigating = value;
-		if (isNavigating) {
-			random_1 = Math.floor(Math.random() * 30) + 20;
-			random_2 = Math.floor(Math.random() * 20) + 60;
-		}
-	});
+$: if ($navigating) {
+	random_1 = Math.floor(Math.random() * 30) + 20;
+	random_2 = Math.floor(Math.random() * 20) + 60;
 }
 </script>
 
