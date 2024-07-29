@@ -26,6 +26,9 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.0.0
         version: 3.0.2(svelte@4.2.12)(vite@5.1.5(sass@1.77.8))
+      merh-forge-ui:
+        specifier: ^1.0.2
+        version: 1.0.2(svelte@4.2.12)
       prettier:
         specifier: ^3.1.1
         version: 3.2.5
@@ -562,6 +565,11 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
+
+  merh-forge-ui@1.0.2:
+    resolution: {integrity: sha512-eHljB3yTb9j4sHaYY4UxtrGI3Yj/w1q/P7G/jDn+MhmFMow+gOw9cUeCVX82nOMEuK3RwzmARyZvfRYPIaGQ1g==}
+    peerDependencies:
+      svelte: ^4.0.0
 
   micromatch@4.0.5:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
@@ -1304,6 +1312,11 @@ snapshots:
   mdn-data@2.0.30: {}
 
   merge2@1.4.1: {}
+
+  merh-forge-ui@1.0.2(svelte@4.2.12):
+    dependencies:
+      '@iconify/svelte': 3.1.6(svelte@4.2.12)
+      svelte: 4.2.12
 
   micromatch@4.0.5:
     dependencies:

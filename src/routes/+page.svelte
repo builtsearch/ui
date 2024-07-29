@@ -2,7 +2,7 @@
 import AppIcon from "$lib/components/AppIcon.svelte";
 import AsyncButton from "$lib/components/AsyncButton.svelte";
 import SegmentedControl from "$lib/components/SegmentedControl.svelte";
-
+import { Checkbox } from "merh-forge-ui";
 async function awaitClick() {
 	await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -17,6 +17,7 @@ let segmentedControlOptions = [
 </script>
 
 <main>
+	<Checkbox />
 	<h1>BuiltSearch UI Library</h1>
 	<div class="card">
 		<h3>Component</h3>

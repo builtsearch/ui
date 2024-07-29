@@ -18,7 +18,6 @@ $: $theme, updateTheme();
 function updateTheme() {
 	if (themeOverride) {
 		t = themeOverride;
-		console.log(t);
 	} else {
 		t = $theme;
 	}
@@ -41,37 +40,39 @@ function updateTheme() {
 	</div>
 </a>
 
-<style>a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  gap: 0.5rem;
-  flex-shrink: 0;
+<style>
+a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	gap: 0.5rem;
+	flex-shrink: 0;
 }
 a img,
 a span {
-  user-select: none;
-  pointer-events: none;
+	user-select: none;
+	pointer-events: none;
 }
 a .name {
-  display: flex;
-  align-items: baseline;
+	display: flex;
+	align-items: baseline;
 }
 a .name span {
-  margin-left: 4px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  color: #dcdfed;
-  font-size: 24px;
-  line-height: 0px;
+	margin-left: 4px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	color: #dcdfed;
+	font-size: 24px;
+	line-height: 0px;
 }
 a .name span.light {
-  color: #303941;
+	color: #303941;
 }
 a .logo {
-  height: 24px;
-}</style>
+	height: 24px;
+}
+</style>

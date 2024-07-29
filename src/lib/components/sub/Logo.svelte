@@ -18,7 +18,6 @@ $: $theme, updateTheme();
 function updateTheme() {
 	if (themeOverride) {
 		t = themeOverride;
-		console.log(t);
 	} else {
 		t = $theme;
 	}
