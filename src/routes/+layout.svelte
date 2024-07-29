@@ -4,8 +4,11 @@ import Header from "$lib/components/Header.svelte";
 import Theme from "$lib/components/sub/Theme.svelte";
 import Footer from "$lib/components/Footer.svelte";
 import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
+// import PageProgressBar from "$lib/components/PageProgressBar.svelte";
+import { PageProgressBar } from "$lib/index.js";
 </script>
 
+<PageProgressBar />
 <Header --transparency="50%">
 	<div class="menu">
 		<Theme />

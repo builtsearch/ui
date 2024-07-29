@@ -24,7 +24,6 @@ onMount(() => {
 });
 
 export function changeTheme() {
-	console.log("🌓 changing theme");
 	document.body.classList.add("transitionEffect");
 
 	if ($theme == "dark") {
