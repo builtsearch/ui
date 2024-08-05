@@ -3,6 +3,8 @@ import Icon from "@iconify/svelte";
 import Popover from "./Popover.svelte";
 import AppIcon from "../AppIcon.svelte";
 
+export let icon = "material-symbols:apps";
+
 const apps = [
 	{ appName: "RC", glyph: "V" },
 	{ appName: "Code", glyph: "C" },
@@ -15,7 +17,7 @@ const apps = [
 <Popover position="bottom-right">
 	<span slot="button">
 		<button class="none">
-			<Icon icon="material-symbols:apps" width="24" />
+			<Icon {icon} width="24" />
 		</button>
 	</span>
 
