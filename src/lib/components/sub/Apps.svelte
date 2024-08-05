@@ -6,11 +6,11 @@ import AppIcon from "../AppIcon.svelte";
 export let icon = "material-symbols:apps";
 
 const apps = [
-	{ appName: "RC", glyph: "V" },
-	{ appName: "Code", glyph: "C" },
-	{ appName: "Materials", glyph: "M" },
-	{ appName: "Guru", glyph: "G" },
-	{ appName: "Real", glyph: "R" },
+	{ appName: "RC", glyph: "V", url: "https://rc.builtsearch.com" },
+	{ appName: "Code", glyph: "C", url: "https://code.builtsearch.com" },
+	{ appName: "Materials", glyph: "M", url: "https://materials.builtsearch.com" },
+	{ appName: "Guru", glyph: "G", url: "https://guru.builtsearch.com" },
+	{ appName: "Real", glyph: "R", url: "https://real.builtsearch.com" },
 ];
 </script>
 
