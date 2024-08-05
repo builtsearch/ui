@@ -17,7 +17,6 @@ let segmentedControlOptions = [
 </script>
 
 <main>
-	<Checkbox />
 	<h1>BuiltSearch UI Library</h1>
 	<div class="card">
 		<h3>Component</h3>

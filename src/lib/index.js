@@ -11,5 +11,6 @@ export { default as AppIcon } from "./components/AppIcon.svelte";
 export { default as AsyncButton } from "./components/AsyncButton.svelte";
 export { default as SegmentedControl } from "./components/SegmentedControl.svelte";
 export { default as PageProgressBar } from "./components/PageProgressBar.svelte";
+export { default as Apps } from "./components/sub/Apps.svelte";
 
 export { theme } from "./components/sub/theme.store.js";

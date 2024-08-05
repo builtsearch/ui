@@ -6,11 +6,13 @@ import Footer from "$lib/components/Footer.svelte";
 import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
 // import PageProgressBar from "$lib/components/PageProgressBar.svelte";
 import { PageProgressBar } from "$lib/index.js";
+import Apps from "$lib/components/sub/Apps.svelte";
 </script>
 
 <PageProgressBar />
 <Header --transparency="50%">
 	<div class="menu">
+		<Apps />
 		<Theme />
 	</div>
 </Header>
@@ -61,5 +63,7 @@ import { PageProgressBar } from "$lib/index.js";
 <style lang="scss">
 .menu {
 	margin-left: auto;
+	display: flex;
+	gap: 0rem;
 }
 </style>
