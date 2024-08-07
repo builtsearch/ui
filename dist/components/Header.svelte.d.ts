@@ -5,6 +5,7 @@ export default class Header extends SvelteComponent<{
     glyph?: string;
     appName?: string;
     height?: string;
+    responsive?: boolean;
     background?: string;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -21,6 +22,7 @@ declare const __propDef: {
         glyph?: string;
         appName?: string;
         height?: string;
+        responsive?: boolean;
         background?: string;
     };
     events: {

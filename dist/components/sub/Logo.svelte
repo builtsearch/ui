@@ -7,9 +7,9 @@ export let glyph = "B";
 export let appName = "";
 export let themeOverride = "";
 export let height = "48px";
+export let responsive = false;
 import logo_light from "../../assets/builtsearch_logo.svg";
 import logo_dark from "../../assets/builtsearch_logo_dark.svg";
-
 $: glyph = glyph.toUpperCase();
 
 let t;
@@ -28,7 +28,7 @@ function updateTheme() {
 	{#if glyph}
 		<AppIcon {glyph} --height={height} />
 	{/if}
-	<div class="name">
+	<div class="name" class:hide={responsive}>
 		<img
 			class="logo"
 			src={t == "light" ? logo_light : logo_dark}
@@ -59,6 +59,11 @@ a span {
 a .name {
   display: flex;
   align-items: baseline;
+}
+@media screen and (max-width: 768px) {
+  a .name.hide {
+    display: none;
+  }
 }
 a .name span {
   margin-left: 4px;

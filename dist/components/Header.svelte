@@ -4,10 +4,11 @@ export let glyph = "B";
 export let appName = "";
 export let height = "36px";
 export let background = "";
+export let responsive = false;
 </script>
 
-<header class:bg-transparent={background == "transparent"}>
-	<Logo {glyph} {appName} {height} />
+<header class:bg-transparent={background == "transparent"} class:responsive>
+	<Logo {glyph} {appName} {height} {responsive} />
 	<div class="slot">
 		<slot />
 	</div>

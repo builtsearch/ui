@@ -6,6 +6,7 @@ export default class Logo extends SvelteComponent<{
     themeOverride?: string;
     appName?: string;
     height?: string;
+    responsive?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {}> {
@@ -20,6 +21,7 @@ declare const __propDef: {
         themeOverride?: string;
         appName?: string;
         height?: string;
+        responsive?: boolean;
     };
     events: {
         [evt: string]: CustomEvent<any>;
