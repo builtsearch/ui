@@ -9,8 +9,8 @@ const apps = [
 	{ appName: "RC", glyph: "V", url: "https://rc.builtsearch.com" },
 	{ appName: "Code", glyph: "C", url: "https://code.builtsearch.com" },
 	{ appName: "Materials", glyph: "M", url: "https://materials.builtsearch.com" },
-	{ appName: "Guru", glyph: "G", url: "https://guru.builtsearch.com" },
-	{ appName: "Real", glyph: "R", url: "https://real.builtsearch.com" },
+	{ appName: "Guru", glyph: "G", url: "https://guru-frontend-new.vercel.app/" },
+	{ appName: "Real", glyph: "R", url: "https://real-2-one.vercel.app" },
 ];
 </script>
 
@@ -24,7 +24,7 @@ const apps = [
 	<span slot="popup">
 		<div class="popup">
 			{#each apps as app}
-				<a href="/" class="href">
+				<a href={app.url} class="href">
 					<div class="icon">
 						<AppIcon glyph={app.glyph} />
 					</div>

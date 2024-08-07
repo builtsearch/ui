@@ -10,7 +10,7 @@ import Apps from "$lib/components/sub/Apps.svelte";
 </script>
 
 <PageProgressBar />
-<Header --transparency="50%">
+<Header --transparency="50%" responsive>
 	<div class="menu">
 		<Apps />
 		<Theme />
