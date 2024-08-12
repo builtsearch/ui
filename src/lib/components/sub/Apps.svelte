@@ -11,6 +11,7 @@ const apps = [
 	{ appName: "Materials", glyph: "M", url: "https://materials.builtsearch.com" },
 	{ appName: "Guru", glyph: "G", url: "https://guru-frontend-new.vercel.app/" },
 	{ appName: "Real", glyph: "R", url: "https://real-2-one.vercel.app" },
+	{ appName: "Events", glyph: "E", url: "https://events-builtsearch.vercel.app" },
 ];
 </script>
 
