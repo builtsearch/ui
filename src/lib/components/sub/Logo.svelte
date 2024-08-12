@@ -8,6 +8,7 @@ export let appName = "";
 export let themeOverride = "";
 export let height = "48px";
 export let responsive = false;
+export let href = "/";
 import logo_light from "$lib/assets/builtsearch_logo.svg";
 import logo_dark from "$lib/assets/builtsearch_logo_dark.svg";
 $: glyph = glyph.toUpperCase();
@@ -24,7 +25,7 @@ function updateTheme() {
 }
 </script>
 
-<a class="button none no-hover" href="/">
+<a class="button none no-hover" {href}>
 	{#if glyph}
 		<AppIcon {glyph} --height={height} />
 	{/if}
