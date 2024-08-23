@@ -4,7 +4,7 @@ import Popover from "./Popover.svelte";
 import AppIcon from "../AppIcon.svelte";
 
 export let icon = "material-symbols:apps";
-
+export let target = "_blank";
 const apps = [
 	{ appName: "RC", glyph: "V", url: "https://rc.builtsearch.com" },
 	{ appName: "Code", glyph: "C", url: "https://code.builtsearch.com" },
@@ -25,7 +25,7 @@ const apps = [
 	<span slot="popup">
 		<div class="popup">
 			{#each apps as app}
-				<a href={app.url} class="href">
+				<a href={app.url} class="href" {target}>
 					<div class="icon">
 						<AppIcon glyph={app.glyph} />
 					</div>
