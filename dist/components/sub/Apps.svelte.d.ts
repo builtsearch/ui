@@ -3,6 +3,7 @@
 /** @typedef {typeof __propDef.slots}  AppsSlots */
 export default class Apps extends SvelteComponent<{
     icon?: string;
+    target?: string;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {}> {
@@ -14,6 +15,7 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         icon?: string;
+        target?: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;
