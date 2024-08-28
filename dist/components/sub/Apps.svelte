@@ -9,9 +9,9 @@ const apps = [
 	{ appName: "RC", glyph: "V", url: "https://rc.builtsearch.com" },
 	{ appName: "Code", glyph: "C", url: "https://code.builtsearch.com" },
 	{ appName: "Materials", glyph: "M", url: "https://materials.builtsearch.com" },
-	{ appName: "Guru", glyph: "G", url: "https://guru-frontend-new.vercel.app/" },
+	{ appName: "Guru", glyph: "G", url: "https://guru.builtsearch.com/" },
 	{ appName: "Real", glyph: "R", url: "https://real-2-one.vercel.app" },
-	{ appName: "Events", glyph: "E", url: "https://events-builtsearch.vercel.app" },
+	{ appName: "Events", glyph: "E", url: "https://events.builtsearch.com" },
 ];
 </script>
 

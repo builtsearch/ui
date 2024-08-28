@@ -10,3 +10,4 @@ export { default as SegmentedControl } from "./components/SegmentedControl.svelt
 export { default as PageProgressBar } from "./components/PageProgressBar.svelte";
 export { default as Apps } from "./components/sub/Apps.svelte";
 export { theme } from "./components/sub/theme.store.js";
+export * from "./helper.js";
