@@ -15,4 +15,4 @@ export { default as Apps } from "./components/sub/Apps.svelte";
 
 export { theme } from "./components/sub/theme.store.js";
 
-export * from "./helper.js";
+export { timeout, debounce, toTitleCase } from "./helper.js";
