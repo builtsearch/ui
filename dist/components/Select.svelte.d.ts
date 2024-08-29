@@ -3,11 +3,11 @@ export function initItems(arr: any): any[];
 /** @typedef {typeof __propDef.events}  SelectEvents */
 /** @typedef {typeof __propDef.slots}  SelectSlots */
 export default class Select extends SvelteComponent<{
-    disabled: any;
     items: string[] | {
         value: string;
         label: string;
     }[];
+    disabled?: boolean;
     change?: (item: any) => void;
     selected?: any;
     reset?: () => void;
@@ -41,11 +41,11 @@ export type SelectSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        disabled: any;
         items: Array<{
             value: string;
             label: string;
         }> | Array<string>;
+        disabled?: boolean;
         change?: (item: any) => void;
         selected?: any;
         reset?: () => void;
