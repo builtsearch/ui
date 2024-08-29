@@ -272,7 +272,7 @@ export function reset() {
 	selected = null;
 }
 
-export function set() {
+export function set(value) {
 	const item = arrItems.find((x) => x.value == value);
 	change(item);
 }
