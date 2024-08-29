@@ -28,6 +28,8 @@ let open = false,
 	dropdownCurrentHeight,
 	dropdown;
 
+export let disabled;
+
 export let dropdownRelative = false;
 let dropdownDisplay = dropdownRelative ? "relative" : "absolute";
 
@@ -382,7 +384,7 @@ async function handleArrowKeys(e) {
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="select__container" use:clickOutside>
+<div class="select__container" use:clickOutside class:disabled>
 	<!-- svelte-ignore a11y-role-has-required-aria-props -->
 	<div
 		tabindex="0"
@@ -394,6 +396,9 @@ async function handleArrowKeys(e) {
 		class:focus={open == true}
 		data-value={selected ? selected.value : ""}
 		on:keydown={(e) => {
+			if (disabled) {
+				return;
+			}
 			if (e.key == "Enter") {
 				e.preventDefault();
 				toggleDropdown(e);
@@ -473,6 +478,16 @@ async function handleArrowKeys(e) {
 	--select-border-radius: var(--border-radius, 0.375rem);
 	--select-padding: var(--padding-block, 0.5rem);
 	--select-font-size: var(--font-size, 1rem);
+
+	&.disabled {
+		pointer-events: none;
+		--bg-input: var(--mono-100);
+		.select {
+			&:focus-visible {
+				outline-color: var(--mono-500) !important;
+			}
+		}
+	}
 	.select {
 		min-width: 200px;
 		padding: 0.5rem;

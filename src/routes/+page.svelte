@@ -34,11 +34,7 @@ let segmentedControlOptions = [
 			on:change={(e) => console.log(e.detail)} />
 	</div>
 	<div class="card">
-		<Select
-			items={["a", "b", "c", "d"]}
-			--padding-inline="0.5rem"
-			--font-size="0.875rem"
-			--padding-block="0.25rem" />
+		<Select items={["a", "b", "c", "d"]} disabled />
 		<Switch />
 	</div>
 	<div class="card">
