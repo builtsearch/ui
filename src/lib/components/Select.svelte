@@ -425,7 +425,7 @@ async function handleArrowKeys(e) {
 						: ""} />
 			</div>
 		{:else}
-			<div class="label">
+			<div class="label" class:placeholder={!selected}>
 				{selected == null ? placeholder : selected.label}
 			</div>
 		{/if}
@@ -519,7 +519,10 @@ async function handleArrowKeys(e) {
 		}
 
 		.label {
-			color: var(--mono-500);
+			&.placeholder {
+				color: var(--mono-500);
+			}
+			color: var(--main);
 		}
 
 		.search__container {
