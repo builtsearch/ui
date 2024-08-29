@@ -495,9 +495,9 @@ async function handleArrowKeys(e) {
 			outline: var(--focus-visible-outline) !important;
 		}
 
-		&.open {
-			// border-radius: var(--select-border-radius) var(--select-border-radius) 0 0;
-		}
+		// &.open {
+		// 	// border-radius: var(--select-border-radius) var(--select-border-radius) 0 0;
+		// }
 
 		&.focus {
 			outline: 1px solid var(--accent);
