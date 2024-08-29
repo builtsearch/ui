@@ -472,7 +472,7 @@ async function handleArrowKeys(e) {
 	flex-direction: column;
 	--select-border-radius: var(--border-radius, 0.375rem);
 	--select-padding: var(--padding-block, 0.5rem);
-
+	--select-font-size: var(--font-size, 1rem);
 	.select {
 		min-width: 200px;
 		padding: 0.5rem;
@@ -517,6 +517,7 @@ async function handleArrowKeys(e) {
 
 		.label {
 			color: var(--main);
+			font-size: var(--select-font-size);
 			&.placeholder {
 				color: var(--mono-500);
 			}
@@ -533,7 +534,7 @@ async function handleArrowKeys(e) {
 				border: none;
 				border-radius: 0;
 				font-style: inherit;
-				font-size: 1rem;
+				font-size: var(--select-font-size);
 				padding: 0 !important;
 				background-color: transparent;
 				&:focus {
@@ -573,6 +574,7 @@ async function handleArrowKeys(e) {
 		.item {
 			padding-inline: var(--padding-inline, 1rem);
 			padding-block: var(--select-padding);
+			font-size: var(--select-font-size);
 			cursor: pointer;
 			&:hover {
 				background-color: var(--mono-100);

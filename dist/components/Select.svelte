@@ -99,7 +99,6 @@ function computeHeight(dropdown) {
 	} else {
 		// const totalHeight
 		const t = dropdown.querySelectorAll(".item").length;
-		console.log(t);
 		const totalHeight = t * rowHeight + 8;
 		if (totalHeight > maxHeight) {
 			dropdownCurrentHeight = maxHeight;
@@ -180,7 +179,6 @@ export function change(item) {
 }
 
 async function toggleDropdown(e) {
-	console.log(e);
 	if (e.target.closest("input")) {
 		return;
 	}
@@ -396,7 +394,6 @@ async function handleArrowKeys(e) {
 		class:focus={open == true}
 		data-value={selected ? selected.value : ""}
 		on:keydown={(e) => {
-			console.log(e.key);
 			if (e.key == "Enter") {
 				e.preventDefault();
 				toggleDropdown(e);
