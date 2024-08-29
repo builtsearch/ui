@@ -425,7 +425,7 @@ async function handleArrowKeys(e) {
 						: ""} />
 			</div>
 		{:else}
-			<div class="label">
+			<div class="label" class:placeholder={!selected}>
 				{selected == null ? placeholder : selected.label}
 			</div>
 		{/if}
@@ -479,6 +479,8 @@ async function handleArrowKeys(e) {
   min-width: 200px;
   padding: 0.5rem;
   padding-block: 0.5rem;
+  padding-left: var(--padding-inline, 1rem);
+  padding-right: 0.5rem;
   border-radius: var(--select-border-radius);
   width: 100%;
   height: 100%;
@@ -506,6 +508,12 @@ async function handleArrowKeys(e) {
 .select__container .select.error {
   border-color: #cf3a3a;
 }
+.select__container .select .label {
+  color: var(--main);
+}
+.select__container .select .label.placeholder {
+  color: var(--mono-500);
+}
 .select__container .select .search__container {
   display: flex;
   align-items: center;
@@ -527,7 +535,7 @@ async function handleArrowKeys(e) {
 }
 .select__container .select .search__container input::placeholder {
   font-size: inherit;
-  color: var(--mono-300);
+  color: var(--mono);
 }
 
 .dropdown {
@@ -552,7 +560,7 @@ async function handleArrowKeys(e) {
   padding-block: 0.25rem;
 }
 .dropdown .items_container .item {
-  padding-inline: 0.5rem;
+  padding-inline: var(--padding-inline, 1rem);
   padding-block: var(--select-padding);
   cursor: pointer;
 }
