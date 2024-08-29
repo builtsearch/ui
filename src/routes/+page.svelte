@@ -33,7 +33,8 @@ let segmentedControlOptions = [
 			on:change={(e) => console.log(e.detail)} />
 	</div>
 	<div class="card">
-		<Select items={["a", "b", "c", "d"]} searchable />
+		<Select items={["a", "b", "c", "d"]} />
+		<input type="text" placeholder="input" />
 	</div>
 	<div class="card">
 		<h3>Buttons</h3>

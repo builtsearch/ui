@@ -480,6 +480,8 @@ async function handleArrowKeys(e) {
 		min-width: 200px;
 		padding: 0.5rem;
 		padding-block: 0.5rem;
+		padding-left: var(--padding-inline, 1rem);
+		padding-right: 0.5rem;
 		border-radius: var(--select-border-radius);
 		width: 100%;
 		height: 100%;
@@ -516,6 +518,10 @@ async function handleArrowKeys(e) {
 			border-color: #cf3a3a;
 		}
 
+		.label {
+			color: var(--mono-500);
+		}
+
 		.search__container {
 			display: flex;
 			align-items: center;
@@ -536,7 +542,7 @@ async function handleArrowKeys(e) {
 				}
 				&::placeholder {
 					font-size: inherit;
-					color: var(--mono-300);
+					color: var(--mono);
 				}
 			}
 		}
@@ -565,7 +571,7 @@ async function handleArrowKeys(e) {
 		overflow-y: auto;
 		padding-block: 0.25rem;
 		.item {
-			padding-inline: 0.5rem;
+			padding-inline: var(--padding-inline, 1rem);
 			padding-block: var(--select-padding);
 			cursor: pointer;
 			&:hover {
