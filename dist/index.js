@@ -17,4 +17,4 @@ export { default as Switch } from "./components/Switch.svelte";
 
 export { theme } from "./components/sub/theme.store.js";
 
-export { timeout, debounce, toTitleCase } from "./helper.js";
+export { timeout, debounce, toTitleCase, toPascalCase } from "./helper.js";
