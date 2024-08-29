@@ -13,6 +13,7 @@ export { default as SegmentedControl } from "./components/SegmentedControl.svelt
 export { default as PageProgressBar } from "./components/PageProgressBar.svelte";
 export { default as Apps } from "./components/sub/Apps.svelte";
 export { default as Select } from "./components/Select.svelte";
+export { default as Switch } from "./components/Switch.svelte";
 
 export { theme } from "./components/sub/theme.store.js";
 
