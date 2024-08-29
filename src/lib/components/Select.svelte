@@ -28,7 +28,7 @@ let open = false,
 	dropdownCurrentHeight,
 	dropdown;
 
-export let disabled;
+export let disabled = false;
 
 export let dropdownRelative = false;
 let dropdownDisplay = dropdownRelative ? "relative" : "absolute";

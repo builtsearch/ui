@@ -22,7 +22,7 @@ export default class Select extends SvelteComponent<{
     getSelected?: () => any;
     getValue?: () => any;
     setError?: () => void;
-    set?: () => void;
+    set?: (value: any) => void;
 }, {
     change: CustomEvent<any>;
 } & {
@@ -33,7 +33,7 @@ export default class Select extends SvelteComponent<{
     get getValue(): () => any;
     get setError(): () => void;
     get reset(): () => void;
-    get set(): () => void;
+    get set(): (value: any) => void;
 }
 export type SelectProps = typeof __propDef.props;
 export type SelectEvents = typeof __propDef.events;
@@ -60,7 +60,7 @@ declare const __propDef: {
         getSelected?: () => any;
         getValue?: () => any;
         setError?: () => void;
-        set?: () => void;
+        set?: (value: any) => void;
     };
     events: {
         change: CustomEvent<any>;
