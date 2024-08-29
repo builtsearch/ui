@@ -519,10 +519,10 @@ async function handleArrowKeys(e) {
 		}
 
 		.label {
+			color: var(--main);
 			&.placeholder {
 				color: var(--mono-500);
 			}
-			color: var(--main);
 		}
 
 		.search__container {
