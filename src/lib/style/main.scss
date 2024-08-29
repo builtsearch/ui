@@ -71,6 +71,8 @@
 	--mono-200: #3b3b3b;
 	--mono-100: #3b3b3b;
 	--mono-50: #23272e;
+
+	--bg-input: #292b2f;
 }
 * {
 	box-sizing: border-box;
@@ -78,6 +80,8 @@
 		color-scheme: dark;
 	}
 	.light {
+		--bg-input: #f2f2f2;
+
 		--main: #344856;
 		--main-alt: #fff;
 		--main-light: #82868f;

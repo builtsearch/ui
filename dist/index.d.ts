@@ -9,5 +9,6 @@ export { default as AsyncButton } from "./components/AsyncButton.svelte";
 export { default as SegmentedControl } from "./components/SegmentedControl.svelte";
 export { default as PageProgressBar } from "./components/PageProgressBar.svelte";
 export { default as Apps } from "./components/sub/Apps.svelte";
+export { default as Select } from "./components/Select.svelte";
 export { theme } from "./components/sub/theme.store.js";
 export { timeout, debounce, toTitleCase } from "./helper.js";

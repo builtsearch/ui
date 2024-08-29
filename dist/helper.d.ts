@@ -15,3 +15,8 @@ export function debounce(func: {
  */
 export function timeout(ms: number | undefined): Promise<any>;
 export function toTitleCase(str: any, lowerCaseRest?: boolean, replaceUnderscore?: boolean): any;
+export function formatWithComma(number: any, decimal?: number, showDecimal?: boolean): any;
+/**
+ * @param {string} str
+ */
+export function toPascalCase(str: string): string;

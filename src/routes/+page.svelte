@@ -2,6 +2,7 @@
 import AppIcon from "$lib/components/AppIcon.svelte";
 import AsyncButton from "$lib/components/AsyncButton.svelte";
 import SegmentedControl from "$lib/components/SegmentedControl.svelte";
+import Select from "$lib/components/Select.svelte";
 import { Checkbox } from "merh-forge-ui";
 async function awaitClick() {
 	await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -30,6 +31,9 @@ let segmentedControlOptions = [
 			evenWidth={true}
 			options={segmentedControlOptions}
 			on:change={(e) => console.log(e.detail)} />
+	</div>
+	<div class="card">
+		<Select items={["a", "b", "c", "d"]} searchable />
 	</div>
 	<div class="card">
 		<h3>Buttons</h3>
