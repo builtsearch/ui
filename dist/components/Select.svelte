@@ -118,7 +118,7 @@ onMount(() => {
 	const label = document.querySelector(`label[for="${id}"]`);
 	label.addEventListener("click", (e) => {
 		e.preventDefault();
-		toggleDropdown(e);
+		toggleDropdown(e, true);
 	});
 });
 
@@ -166,10 +166,13 @@ function initInput(e) {
 
 function clickOutside(element, callback) {
 	document.body.addEventListener("click", onClick);
-
 	function onClick(event) {
-		if (!element.contains(event.target) && open) {
-			closeDropdown();
+		const cond1 = element.contains(event.target);
+		const cond2 = event.target.getAttribute("for") == id;
+		if (open) {
+			if (!cond1 && !cond2) {
+				closeDropdown();
+			}
 		}
 	}
 }
@@ -186,19 +189,22 @@ export function change(item) {
 	dispatch("change", selected);
 }
 
-async function toggleDropdown(e, bypass=false) {
-	if (e.target.closest("input") || bypass) {
-		return;
+async function toggleDropdown(e, bypass = false) {
+	if (!bypass) {
+		if (e.target.closest("input")) {
+			return;
+		}
 	}
 	open = !open;
+	await tick();
 	if (!open) {
 		return closeDropdown();
 	}
+
 	if (searchable) {
 		preselected = false;
 		input.value = "";
 		placeholder = selected ? selected.label : placeholder;
-
 		foundSearch = true;
 	}
 
