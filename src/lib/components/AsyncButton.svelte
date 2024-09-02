@@ -39,11 +39,13 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 	width: var(--width, fit-content);
 	padding-inline: var(--padding-inline, 2rem);
-	position: relative;
-
+	font-size: var(--font-size, 1rem);
+	padding-block: var(--padding-block, 0.5rem);
 	.icon {
+		display: block;
 		position: absolute;
 		bottom: 0;
 	}
