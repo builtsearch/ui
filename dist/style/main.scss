@@ -42,7 +42,7 @@
 	--accent-300: #7ec2ff;
 	--accent-400: #65a2d4;
 	--accent-500: #4692d1;
-	--accent-600: #247bb8;
+	--accent-600: #12%bb8;
 	--accent-700: #0065a0;
 	--accent-800: #004f88;
 	--accent-900: #003b71;
@@ -300,6 +300,7 @@ input {
 	font-feature-settings: "case" !important;
 	color: var(--main);
 	--bg-color: var(--bg-p);
+	--outline-color: var(--accent);
 	line-height: normal;
 
 	border: 1px solid var(--mono-200);
@@ -314,7 +315,7 @@ input {
 	}
 	&:focus-within {
 		border: 1px solid transparent;
-		outline: 1px solid var(--accent);
+		outline: 1px solid var(--outline-color);
 	}
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
@@ -325,6 +326,11 @@ input {
 	&:disabled {
 		background-color: var(--mono-100);
 		color: var(--mono);
+	}
+	&.error {
+		background-color: color-mix(in srgb, var(--red) 12%, transparent);
+		outline: 1px solid var(--red);
+		border: 1px solid transparent;
 	}
 }
 
@@ -363,6 +369,12 @@ textarea {
 	&:disabled {
 		background-color: var(--mono-100);
 		color: var(--mono);
+	}
+
+	&.error {
+		background-color: color-mix(in srgb, var(--red) 12%, transparent);
+		outline: 1px solid var(--red);
+		border: 1px solid transparent;
 	}
 }
 
@@ -423,5 +435,9 @@ select:-webkit-autofill:focus {
 	&.disabled {
 		background-color: var(--mono-100);
 	}
+	&.error {
+		background-color: color-mix(in srgb, var(--red) 12%, transparent);
+		outline: 1px solid var(--red);
+		border: 1px solid transparent;
+	}
 }
-

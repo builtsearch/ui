@@ -329,7 +329,7 @@ input {
 	}
 	&.error {
 		background-color: color-mix(in srgb, var(--red) 12%, transparent);
-		outline: 1px solid var(--red);
+		outline: 2px solid var(--red);
 		border: 1px solid transparent;
 	}
 }
@@ -373,7 +373,7 @@ textarea {
 
 	&.error {
 		background-color: color-mix(in srgb, var(--red) 12%, transparent);
-		outline: 1px solid var(--red);
+		outline: 2px solid var(--red);
 		border: 1px solid transparent;
 	}
 }
@@ -437,7 +437,7 @@ select:-webkit-autofill:focus {
 	}
 	&.error {
 		background-color: color-mix(in srgb, var(--red) 12%, transparent);
-		outline: 1px solid var(--red);
+		outline: 2px solid var(--red);
 		border: 1px solid transparent;
 	}
 }
