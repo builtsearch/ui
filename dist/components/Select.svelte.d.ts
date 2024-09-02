@@ -11,6 +11,7 @@ export default class Select extends SvelteComponent<{
     change?: (item: any) => void;
     selected?: any;
     reset?: () => void;
+    id?: string;
     dropdownRelative?: boolean;
     itemBorder?: boolean;
     searchable?: boolean;
@@ -49,6 +50,7 @@ declare const __propDef: {
         change?: (item: any) => void;
         selected?: any;
         reset?: () => void;
+        id?: string;
         dropdownRelative?: boolean;
         itemBorder?: boolean;
         searchable?: boolean;

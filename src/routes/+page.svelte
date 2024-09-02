@@ -35,7 +35,7 @@ let segmentedControlOptions = [
 	</div>
 	<div class="card">
 		<label for="select">Select</label>
-		<Select id="select" items={["a", "b", "c", "d"]} disabled />
+		<Select id="select" items={["a", "b", "c", "d"]} />
 		<Switch />
 	</div>
 	<div class="card">
