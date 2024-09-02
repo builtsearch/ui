@@ -20,10 +20,10 @@ import { createEventDispatcher, onMount, tick } from "svelte";
 import { quadOut } from "svelte/easing";
 import Icon from "@iconify/svelte";
 
+export let error;
 let open = false,
 	foundSearch = true,
 	input,
-	error,
 	preselected,
 	dropdownCurrentHeight,
 	dropdown;
@@ -529,7 +529,9 @@ async function handleArrowKeys(e) {
   color: var(--mono-500);
 }
 .select__container .select.error {
-  border-color: #cf3a3a;
+  background-color: color-mix(in srgb, var(--red) 12%, transparent);
+  outline: 2px solid var(--red);
+  border: 1px solid transparent;
 }
 .select__container .select .label {
   color: var(--main);
