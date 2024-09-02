@@ -61,6 +61,8 @@ let segmentedControlOptions = [
 				<input type="text" value="input" />
 				<input type="email" for="email" id="email" placeholder="Auto Complete" />
 
+				<input class="error" type="email" placeholder="Error Email" />
+
 				<input type="text" value="disabled" disabled />
 				<div class="inputBox">
 					<div class="prefix">$</div>
@@ -75,6 +77,13 @@ let segmentedControlOptions = [
 					<button class="disabled">OK</button>
 				</div>
 			</div>
+		</div>
+		<div class="card">
+			<h3>TextArea</h3>
+
+			<textarea>textarea</textarea>
+			<textarea disabled>disabled</textarea>
+			<textarea class="error">error</textarea>
 		</div>
 	</div>
 </main>
