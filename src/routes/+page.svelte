@@ -34,7 +34,8 @@ let segmentedControlOptions = [
 			on:change={(e) => console.log(e.detail)} />
 	</div>
 	<div class="card">
-		<Select items={["a", "b", "c", "d"]} disabled />
+		<label for="select">Select</label>
+		<Select id="select" items={["a", "b", "c", "d"]} disabled />
 		<Switch />
 	</div>
 	<div class="card">

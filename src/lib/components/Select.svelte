@@ -29,7 +29,7 @@ let open = false,
 	dropdown;
 
 export let disabled = false;
-
+export let id = "";
 export let dropdownRelative = false;
 let dropdownDisplay = dropdownRelative ? "relative" : "absolute";
 
@@ -114,7 +114,13 @@ function computeHeight(dropdown) {
 
 const dispatch = createEventDispatcher();
 
-onMount(() => {});
+onMount(() => {
+	const label = document.querySelector(`label[for="${id}"]`);
+	label.addEventListener("click", (e) => {
+		e.preventDefault();
+		toggleDropdown(e);
+	});
+});
 
 const arrItems = (() => {
 	if (!items) {
@@ -180,8 +186,8 @@ export function change(item) {
 	dispatch("change", selected);
 }
 
-async function toggleDropdown(e) {
-	if (e.target.closest("input")) {
+async function toggleDropdown(e, bypass=false) {
+	if (e.target.closest("input") || bypass) {
 		return;
 	}
 	open = !open;
@@ -387,6 +393,7 @@ async function handleArrowKeys(e) {
 <div class="select__container" use:clickOutside class:disabled>
 	<!-- svelte-ignore a11y-role-has-required-aria-props -->
 	<div
+		{id}
 		tabindex="0"
 		role="combobox"
 		class="select"
