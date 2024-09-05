@@ -20,7 +20,7 @@ import { createEventDispatcher, onMount, tick } from "svelte";
 import { quadOut } from "svelte/easing";
 import Icon from "@iconify/svelte";
 
-export let error;
+export let error = false;
 let open = false,
 	foundSearch = true,
 	input,

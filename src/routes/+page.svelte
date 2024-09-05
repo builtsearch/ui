@@ -27,7 +27,10 @@ let segmentedControlOptions = [
 		</div>
 	</div>
 	<div class="card">
-		<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
+		<div class="row">
+			<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
+			<AsyncButton buttonStyle="warning" handleClick={awaitClick}>Async Button</AsyncButton>
+		</div>
 		<SegmentedControl
 			evenWidth={true}
 			options={segmentedControlOptions}
@@ -46,6 +49,8 @@ let segmentedControlOptions = [
 			<button class="">Primary</button>
 			<button class="outline">Outline</button>
 			<button class="disabled">Disabled</button>
+			<button class="warning">Warning</button>
+			<button class="warning outlined">Warning Outlined</button>
 			<button class="none">None</button>
 			<button class="small">smaller button</button>
 		</div>
@@ -116,6 +121,7 @@ h3 {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		flex-wrap: wrap;
 	}
 	.col {
 		display: flex;

@@ -232,6 +232,20 @@ button {
 		}
 	}
 
+	&.warning {
+		// --button-bg: color-mix(in srgb, var(--red) 12%, transparent);
+		// --border-color: var(--red);
+		// border: 1px solid var(--border-color);
+		--text-color: var(--main-alt);
+		--button-bg: var(--red);
+		&.outlined {
+			--button-bg: color-mix(in srgb, var(--red) 12%, transparent);
+			--border-color: var(--red);
+			border: 1px solid var(--border-color);
+			--text-color: var(--red);
+		}
+	}
+
 	&.disabled {
 		--text-color: var(--mono-500);
 		--button-bg: var(--mono-100);
@@ -283,9 +297,6 @@ button {
 	&.rounded {
 		aspect-ratio: 1;
 		border-radius: 100%;
-	}
-	&.warning {
-		--text-color: var(--red);
 	}
 }
 
