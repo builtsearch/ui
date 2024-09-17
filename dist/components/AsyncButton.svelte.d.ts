@@ -3,7 +3,7 @@
 /** @typedef {typeof __propDef.slots}  AsyncButtonSlots */
 export default class AsyncButton extends SvelteComponent<{
     handleClick: any;
-    buttonStyle?: string;
+    buttonStyle?: "default" | "none" | "outlined" | "warning";
     disabled?: boolean;
     persist?: boolean;
     handleButtonClick?: () => Promise<void>;
@@ -21,7 +21,7 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         handleClick: any;
-        buttonStyle?: string;
+        buttonStyle?: "default" | "outlined" | "warning" | "none";
         disabled?: boolean;
         persist?: boolean;
         handleButtonClick?: () => Promise<void>;

@@ -1,7 +1,9 @@
 <script>
 import Icon from "@iconify/svelte";
 export let handleClick;
-export let buttonStyle = "";
+
+/** @type {"default" | "outlined" | "warning" | "none"} */
+export let buttonStyle = "default";
 export let disabled = false;
 export let persist = false;
 let isAwaiting = false;
@@ -22,6 +24,7 @@ export async function handleButtonClick() {
 	on:click={handleButtonClick}
 	class:isAwaiting
 	class:disabled
+	class:warning={buttonStyle == "warning"}
 	class:outlined={buttonStyle == "outlined"}
 	class:none={buttonStyle == "none"}>
 	{#if isAwaiting}
@@ -40,7 +43,7 @@ export async function handleButtonClick() {
   justify-content: center;
   position: relative;
   width: var(--width, fit-content);
-  padding-inline: var(--padding-inline, 2rem);
+  padding-inline: var(--padding-inline, 1rem);
   font-size: var(--font-size, 1rem);
   padding-block: var(--padding-block, 0.5rem);
 }
@@ -62,6 +65,10 @@ button.isAwaiting.outlined {
   --border-color: var(--accent-400);
   --button-bg: color-mix(in srgb, var(--accent-600), 90% transparent);
   --text-color: var(--accent);
+}
+button.isAwaiting.warning {
+  filter: none;
+  --button-bg: color-mix(in srgb, var(--red) 50%, var(--mono));
 }
 button span.hide {
   visibility: hidden;
