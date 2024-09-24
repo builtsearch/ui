@@ -7,6 +7,7 @@ import FooterLinks from "$lib/components/sub/FooterLinks.svelte";
 // import PageProgressBar from "$lib/components/PageProgressBar.svelte";
 import { PageProgressBar } from "$lib/index.js";
 import Apps from "$lib/components/sub/Apps.svelte";
+import AvatarMenu from "$lib/components/AvatarMenu.svelte";
 </script>
 
 <PageProgressBar />
@@ -14,6 +15,17 @@ import Apps from "$lib/components/sub/Apps.svelte";
 	<div class="menu">
 		<Apps />
 		<Theme />
+		<AvatarMenu>
+			<button>
+				<span>Sign In</span>
+			</button>
+			<button>
+				<span>Dashsboard</span>
+			</button>
+			<button>
+				<span>Sign Out</span>
+			</button>
+		</AvatarMenu>
 	</div>
 </Header>
 <slot />
@@ -64,6 +76,7 @@ import Apps from "$lib/components/sub/Apps.svelte";
 .menu {
 	margin-left: auto;
 	display: flex;
-	gap: 0rem;
+	gap: 0.25rem;
+	align-items: center;
 }
 </style>

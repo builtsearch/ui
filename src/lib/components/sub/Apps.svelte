@@ -41,8 +41,8 @@ button {
 	outline: none;
 	border: none;
 	padding: 0;
-	height: 36px;
-	width: 36px;
+	height: 32px;
+	width: 32px;
 	aspect-ratio: 1;
 	border-radius: 100px;
 	display: flex;

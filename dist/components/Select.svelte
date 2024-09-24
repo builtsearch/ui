@@ -115,6 +115,7 @@ function computeHeight(dropdown) {
 const dispatch = createEventDispatcher();
 
 onMount(() => {
+	if (!id) return;
 	const label = document.querySelector(`label[for="${id}"]`);
 	label.addEventListener("click", (e) => {
 		e.preventDefault();
