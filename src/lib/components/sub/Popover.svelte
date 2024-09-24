@@ -1,17 +1,20 @@
 <script>
-import { createEventDispatcher, tick } from "svelte";
+import { onDestroy, tick } from "svelte";
 
 export let position = "auto";
 export let autoClose = true;
+import { browser } from "$app/environment";
 let showPopup, button, popup;
-let scrollTop;
-
+let scrollPosition;
 $: showPopup, onShowPopup();
 
 async function onShowPopup() {
-	if (!showPopup) return;
+	if (!showPopup) {
+		enableScroll();
+		return;
+	}
 	await tick();
-	scrollTop = window.scrollY;
+	preventScroll();
 
 	if (popup) {
 		const windowHeight = window.innerHeight;
@@ -87,18 +90,27 @@ async function onShowPopup() {
 	}
 }
 
-function scroll(e) {
-	if (showPopup) {
-		window.scrollTo(0, scrollTop);
-	}
-}
-
 function closePopover() {
 	showPopup = false;
+	enableScroll();
+}
+
+onDestroy(() => {
+	enableScroll();
+});
+
+function preventScroll() {
+	if (!browser) return;
+	document.body.style.overflow = "hidden";
+	document.documentElement.classList.add("scrollbar-gutter");
+}
+
+function enableScroll() {
+	if (!browser) return;
+	document.body.style.overflow = "auto";
+	document.documentElement.classList.remove("scrollbar-gutter");
 }
 </script>
-
-<svelte:window on:scroll={scroll} />
 
 {#if showPopup}
 	<!-- svelte-ignore a11y-no-static-element-interactions -->

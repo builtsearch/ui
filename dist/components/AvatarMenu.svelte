@@ -51,7 +51,7 @@ button.avatar .initial {
   margin-top: 0.25rem;
 }
 
-:global(.avatar-menu button) {
+:global(.avatar-menu button, .avatar-menu a) {
   text-wrap: nowrap;
   font-size: 0.875rem;
   background-color: transparent;
@@ -68,6 +68,6 @@ button.avatar .initial {
   color: var(--mono-700);
 }
 
-:global(.avatar-menu button:hover) {
+:global(.avatar-menu button:hover, .avatar-menu a:hover) {
   background-color: var(--bg-s);
 }</style>

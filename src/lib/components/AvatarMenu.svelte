@@ -64,7 +64,7 @@ button.avatar {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	color: var(--mono-700);
+	color: var(--color, var(--mono-700));
 }
 :global(.avatar-menu button:hover, .avatar-menu a:hover) {
 	background-color: var(--bg-s);
