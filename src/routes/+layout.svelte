@@ -19,9 +19,9 @@ import AvatarMenu from "$lib/components/AvatarMenu.svelte";
 			<button>
 				<span>Sign In</span>
 			</button>
-			<button>
+			<a href="/">
 				<span>Dashsboard</span>
-			</button>
+			</a>
 			<button>
 				<span>Sign Out</span>
 			</button>

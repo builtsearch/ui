@@ -11,5 +11,7 @@ export { default as PageProgressBar } from "./components/PageProgressBar.svelte"
 export { default as Apps } from "./components/sub/Apps.svelte";
 export { default as Select } from "./components/Select.svelte";
 export { default as Switch } from "./components/Switch.svelte";
+export { default as Popover } from "./components/sub/Popover.svelte";
+export { default as AvatarMenu } from "./components/AvatarMenu.svelte";
 export { theme } from "./components/sub/theme.store.js";
 export { timeout, debounce, toTitleCase, toPascalCase } from "./helper.js";

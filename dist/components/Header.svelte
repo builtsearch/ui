@@ -9,6 +9,7 @@ export let responsive = false;
 
 <header class:bg-transparent={background == "transparent"} class:responsive>
 	<Logo {glyph} {appName} {height} {responsive} />
+
 	<div class="slot">
 		<slot />
 	</div>
