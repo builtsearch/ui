@@ -7,7 +7,7 @@ let avatarElement;
 let avatar, initial;
 
 if (src) {
-	if (src.includes("http")) {
+	if (src.startsWith("http") || src.startsWith("/") || src.startsWith("data:")) || src.startsWith("blob:") {
 		avatar = src;
 	} else {
 		initial = src.toString().charAt(0).toUpperCase() || "?";
@@ -41,24 +41,26 @@ onMount(() => {
 	{/if}
 </div>
 
-<style>.avatar {
-  border-radius: 50%;
-  height: var(--height, 30px);
-  width: var(--height, 30px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-color, var(--accent-400));
-  overflow: clip;
+<style>
+.avatar {
+	border-radius: 50%;
+	height: var(--height, 30px);
+	width: var(--height, 30px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-color, var(--accent-400));
+	overflow: clip;
 }
 .avatar .initial {
-  padding: var(--padding, 6px);
-  font-size: var(--font-size, 1rem);
-  font-weight: var(--font-weight, 500);
-  color: var(--main-alt);
+	padding: var(--padding, 6px);
+	font-size: var(--font-size, 1rem);
+	font-weight: var(--font-weight, 500);
+	color: var(--main-alt);
 }
 .avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}</style>
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+</style>
