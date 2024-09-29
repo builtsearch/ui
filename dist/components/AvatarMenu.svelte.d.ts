@@ -2,8 +2,7 @@
 /** @typedef {typeof __propDef.events}  AvatarMenuEvents */
 /** @typedef {typeof __propDef.slots}  AvatarMenuSlots */
 export default class AvatarMenu extends SvelteComponent<{
-    avatar?: any;
-    initial?: any;
+    src?: any;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -16,8 +15,7 @@ export type AvatarMenuSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        avatar?: any;
-        initial?: any;
+        src?: any;
     };
     events: {
         [evt: string]: CustomEvent<any>;

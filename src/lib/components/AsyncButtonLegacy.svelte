@@ -1,6 +1,6 @@
 <script>
 import Icon from "@iconify/svelte";
-import { get_current_component } from "svelte/internal";
+export let handleClick;
 
 /** @type {"default" | "outlined" | "warning" | "none"} */
 export let buttonStyle = "default";
@@ -9,30 +9,12 @@ export let persist = false;
 let isAwaiting = false;
 let button;
 
-const dispatch = createEventDispatcher();
-
-function createEventDispatcher() {
-	const component = get_current_component();
-	return async (type, detail) => {
-		const callbacks = component.$$.callbacks[type];
-		if (callbacks && callbacks.length > 0) {
-			const fn = callbacks[0];
-			const res = fn.call(component, detail);
-
-			if (res instanceof Promise) {
-				return await res;
-			}
-			return res;
-		}
-		return [];
-	};
-}
-
 export async function handleButtonClick() {
 	if (disabled) return;
 	if (isAwaiting) return;
 	isAwaiting = true;
-	await dispatch("click");
+	await handleClick();
+
 	if (persist) return;
 	isAwaiting = false;
 }

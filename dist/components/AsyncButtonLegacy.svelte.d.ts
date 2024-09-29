@@ -1,7 +1,8 @@
-/** @typedef {typeof __propDef.props}  AsyncButtonProps */
-/** @typedef {typeof __propDef.events}  AsyncButtonEvents */
-/** @typedef {typeof __propDef.slots}  AsyncButtonSlots */
-export default class AsyncButton extends SvelteComponent<{
+/** @typedef {typeof __propDef.props}  AsyncButtonLegacyProps */
+/** @typedef {typeof __propDef.events}  AsyncButtonLegacyEvents */
+/** @typedef {typeof __propDef.slots}  AsyncButtonLegacySlots */
+export default class AsyncButtonLegacy extends SvelteComponent<{
+    handleClick: any;
     buttonStyle?: "default" | "none" | "outlined" | "warning";
     disabled?: boolean;
     persist?: boolean;
@@ -13,12 +14,13 @@ export default class AsyncButton extends SvelteComponent<{
 }> {
     get handleButtonClick(): () => Promise<void>;
 }
-export type AsyncButtonProps = typeof __propDef.props;
-export type AsyncButtonEvents = typeof __propDef.events;
-export type AsyncButtonSlots = typeof __propDef.slots;
+export type AsyncButtonLegacyProps = typeof __propDef.props;
+export type AsyncButtonLegacyEvents = typeof __propDef.events;
+export type AsyncButtonLegacySlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
+        handleClick: any;
         buttonStyle?: "default" | "outlined" | "warning" | "none";
         disabled?: boolean;
         persist?: boolean;

@@ -8,8 +8,7 @@ import Switch from "$lib/components/Switch.svelte";
 
 async function awaitClick() {
 	await new Promise((resolve) => setTimeout(resolve, 1000));
-
-	console.log("done");
+	return "ok";
 }
 
 let segmentedControlOptions = [
@@ -31,8 +30,8 @@ let segmentedControlOptions = [
 	</div>
 	<div class="card">
 		<div class="row">
-			<AsyncButton handleClick={awaitClick}>Async Button</AsyncButton>
-			<AsyncButton buttonStyle="warning" handleClick={awaitClick}>Async Button</AsyncButton>
+			<AsyncButton on:click={awaitClick}>Async Button</AsyncButton>
+			<AsyncButton buttonStyle="warning" on:click={awaitClick}>Async Button</AsyncButton>
 		</div>
 		<SegmentedControl
 			evenWidth={true}
