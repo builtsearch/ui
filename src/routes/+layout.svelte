@@ -15,7 +15,7 @@ import AvatarMenu from "$lib/components/AvatarMenu.svelte";
 	<div class="menu">
 		<Apps />
 		<Theme />
-		<AvatarMenu>
+		<AvatarMenu src="A">
 			<button>
 				<span>Sign In</span>
 			</button>
