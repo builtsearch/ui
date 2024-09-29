@@ -17,6 +17,8 @@ export { default as Switch } from "./components/Switch.svelte";
 
 export { default as Popover } from "./components/sub/Popover.svelte";
 export { default as AvatarMenu } from "./components/AvatarMenu.svelte";
+export { default as Avatar } from "./components/Avatar.svelte";
+
 
 export { theme } from "./components/sub/theme.store.js";
 
