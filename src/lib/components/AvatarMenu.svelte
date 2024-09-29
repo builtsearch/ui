@@ -1,8 +1,16 @@
 <script>
 import Popover from "./sub/Popover.svelte";
 
-export let avatar = null;
-export let initial = null;
+export let src = null;
+let avatar, initial;
+
+if (src) {
+	if (src.includes("http")) {
+		avatar = src;
+	} else {
+		initial = src.toString().charAt(0).toUpperCase() || "?";
+	}
+}
 </script>
 
 <Popover>

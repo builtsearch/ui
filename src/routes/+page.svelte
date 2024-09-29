@@ -1,6 +1,7 @@
 <script>
 import AppIcon from "$lib/components/AppIcon.svelte";
 import AsyncButton from "$lib/components/AsyncButton.svelte";
+import Avatar from "$lib/components/Avatar.svelte";
 import SegmentedControl from "$lib/components/SegmentedControl.svelte";
 import Select from "$lib/components/Select.svelte";
 import Switch from "$lib/components/Switch.svelte";
@@ -25,6 +26,8 @@ let segmentedControlOptions = [
 		<div class="row">
 			<AppIcon glyph="C" --height="48px" />
 		</div>
+
+		<Avatar --height="128px" src="A" />
 	</div>
 	<div class="card">
 		<div class="row">
