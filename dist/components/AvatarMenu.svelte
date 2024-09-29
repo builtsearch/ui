@@ -1,28 +1,14 @@
 <script>
+import Avatar from "./Avatar.svelte";
 import Popover from "./sub/Popover.svelte";
 
 export let src = null;
-let avatar, initial;
-
-if (src) {
-	if (src.includes("http")) {
-		avatar = src;
-	} else {
-		initial = src.toString().charAt(0).toUpperCase() || "?";
-	}
-}
 </script>
 
 <Popover>
 	<span style="display:flex" slot="button">
 		<button class="none no-hover avatar">
-			{#if avatar}
-				<img src={avatar} alt="avatar" />
-			{:else}
-				<div class="initial">
-					{initial || "?"}
-				</div>
-			{/if}
+			<Avatar {src} />
 		</button>
 	</span>
 
@@ -32,19 +18,12 @@ if (src) {
 </Popover>
 
 <style>button.avatar {
-  border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  padding: 6px;
+  border-radius: 50%;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--accent-400);
-}
-button.avatar .initial {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--main-alt);
+  background-color: transparent;
 }
 
 .avatar-menu {

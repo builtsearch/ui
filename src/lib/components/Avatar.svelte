@@ -7,7 +7,7 @@ let avatarElement;
 let avatar, initial;
 
 if (src) {
-	if (src.includes("http")) {
+	if (src.startsWith("http") || src.startsWith("/") || src.startsWith("data:")) {
 		avatar = src;
 	} else {
 		initial = src.toString().charAt(0).toUpperCase() || "?";
