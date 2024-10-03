@@ -17,7 +17,7 @@ function onLinkClick(e, link) {
 			on:click={(e) => {
 				onLinkClick(e, link);
 			}}
-			title={link.text + " page is currently under construction."}
+			title={link.text}
 			href={link.url}
 			disabled={link.disabled}
 			tabindex={link.disabled ? -1 : 0}>
