@@ -17,7 +17,7 @@ function onLinkClick(e, link) {
 			on:click={(e) => {
 				onLinkClick(e, link);
 			}}
-			title={link.text + " page is currently under construction."}
+			title={link.text}
 			href={link.url}
 			disabled={link.disabled}
 			tabindex={link.disabled ? -1 : 0}>
@@ -26,37 +26,39 @@ function onLinkClick(e, link) {
 	{/each}
 </div>
 
-<style>a {
-  text-decoration: none;
-  color: inherit;
+<style>
+a {
+	text-decoration: none;
+	color: inherit;
 }
 a:hover {
-  color: var(--accent);
+	color: var(--accent);
 }
 a[disabled] {
-  color: color-mix(in srgb, var(--footer-font-color) 50%, transparent);
-  cursor: default;
+	color: color-mix(in srgb, var(--footer-font-color) 50%, transparent);
+	cursor: default;
 }
 
 .title {
-  color: var(--footer-title-color);
-  font-size: 1.25rem;
-  font-weight: 600;
+	color: var(--footer-title-color);
+	font-size: 1.25rem;
+	font-weight: 600;
 }
 @media screen and (max-width: 600px) {
-  .title {
-    text-align: center;
-  }
+	.title {
+		text-align: center;
+	}
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.5rem;
-  gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.5rem;
+	gap: 0.5rem;
 }
 @media screen and (max-width: 600px) {
-  .list {
-    align-items: center;
-  }
-}</style>
+	.list {
+		align-items: center;
+	}
+}
+</style>
