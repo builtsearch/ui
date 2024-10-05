@@ -5,17 +5,23 @@ import { page } from "$app/stores";
 export let glyph = "B";
 export let copyright_url = $page.url.host;
 export let appName = "";
+export let icon = true;
 </script>
 
-<footer {glyph}>
+<footer>
 	<div class="footer_container">
 		<div class="grid">
 			<div class="logo">
-				<Logo {glyph} {appName} themeOverride="dark" />
-				<span class="tagline">
-					<slot name="tagline" />
-				</span>
+				{#if icon}
+					<Logo {glyph} {appName} themeOverride="dark" />
+					<span class="tagline">
+						<slot name="tagline" />
+					</span>
+				{:else}
+					<slot name="icon" />
+				{/if}
 			</div>
+
 			<div class="links">
 				<slot name="column1" />
 				<slot name="column2" />

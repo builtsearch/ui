@@ -5,10 +5,15 @@ export let appName = "";
 export let height = "36px";
 export let background = "";
 export let responsive = false;
+export let icon = true;
 </script>
 
 <header class:bg-transparent={background == "transparent"} class:responsive>
-	<Logo {glyph} {appName} {height} {responsive} />
+	{#if icon}
+		<Logo {glyph} {appName} {height} {responsive} />
+	{:else}
+		<slot name="icon" />
+	{/if}
 
 	<div class="slot">
 		<slot />

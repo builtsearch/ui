@@ -11,7 +11,7 @@ import AvatarMenu from "$lib/components/AvatarMenu.svelte";
 </script>
 
 <PageProgressBar />
-<Header --transparency="50%" responsive>
+<Header --transparency="50%" responsive icon={false}>
 	<div class="menu">
 		<Apps />
 		<Theme />
